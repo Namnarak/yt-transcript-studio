@@ -4,6 +4,15 @@ All notable changes to this project are documented here. The format is based on
 [Keep a Changelog](https://keepachangelog.com/), and this project adheres to
 [Semantic Versioning](https://semver.org/).
 
+## [v1.0.1] - 2026-08-14
+
+### Changes
+
+- chore: upgrade default Gemini model to 3.7 Flash
+  - Update default AI model option in panel.html to gemini-3.7-flash.
+  - Update default settings in panel.js to use gemini-3.7-flash.
+  - Update fallback migration check in panel.js initialization to default to gemini-3.7-flash.
+
 ## [1.0.0] — 2026-06-17
 
 Initial public release.

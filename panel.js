@@ -42,7 +42,7 @@ const settings = {
   theme: 'system', timestamps: true, follow: false,
   paragraph: false, clean: false, highlightsOnly: false,
   fontSize: 14, format: 'txt', autoFetch: true,
-  aiModel: 'gemini-3.5-flash'
+  aiModel: 'gemini-3.7-flash'
 };
 let aiKey = ''; // stored separately in storage.local
 
@@ -664,7 +664,7 @@ function wireEvents() {
 // ===========================================================================
 (async function init() {
   await loadSettings();
-  if (!/^gemini-3/.test(settings.aiModel)) settings.aiModel = 'gemini-3.5-flash'; // migrate off retired 2.x ids
+  if (!/^gemini-3/.test(settings.aiModel)) settings.aiModel = 'gemini-3.7-flash'; // migrate off retired 2.x ids
   applyTheme(); applyFontSize(); populateFormats();
   el.footSupport.href = SUPPORT_URL;
   el.tgTimestamps.classList.toggle('on', settings.timestamps);
