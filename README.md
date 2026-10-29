@@ -1,3 +1,38 @@
+# Transcript Studio — Multi AI Fork
+
+Fork of https://github.com/krishnakanthb13/yt-transcript-studio
+with upstream authorship and GPL-3.0 license retained.
+
+## Fork additions (1.2.0)
+
+- **ChatGPT Web (no API key)**: Select ChatGPT website in the AI Summary panel,
+  fetch a video transcript, then click Generate / Send. Opens a signed-in ChatGPT
+  tab, attempts to fill the visible message composer and click Send. Website updates,
+  login requirements and content limits can prevent automatic sending; when needed
+  the message remains in the composer or is copied to clipboard.
+  Prompts exceeding 55,000 characters are copied *in full* rather than truncated.
+  Responses stay in ChatGPT and do not appear in the extension.
+- **Unlimited AI profiles**: Add CyonaraAI, OpenAI, DeepSeek, OpenRouter, Ollama,
+  Gemini, Anthropic and custom AI connections through Settings.
+  Each profile has a separate name, endpoint, model and optional API key.
+  Compatibility requires an OpenAI-compatible chat/completions API, native
+  Gemini generateContent API or Anthropic Messages API.
+- **CyonaraAI**: Enter the actual CyonaraAI-compatible API URL and model, or
+  choose the Cyonara ChatBot Website profile to open its real website and paste
+  the full prompt. No CyonaraAI API/site endpoint is guessed or hard-coded.
+- **Any other chat website**: Website handoff copies the entire prompt to clipboard
+  and opens your custom URL; manual paste is needed. Auto-submit is provided
+  specifically for ChatGPT Web, not arbitrary third-party websites.
+- **Privacy**: Keys are stored in Chrome local extension storage, NOT cloud sync.
+  They are not encrypted at the OS level. A host permission prompt appears for
+  each new API host, and data is sent only on user action. Remote endpoints
+  must use HTTPS; HTTP is allowed only for localhost and 127.0.0.1.
+- **Installation**: Open brave://extensions, enable Developer mode,
+  click Load unpacked, and select the repository folder with manifest.json.
+- **Tests**: Run node --test.
+
+## Original upstream documentation
+
 # Transcript Studio for YouTube — Browser Extension
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)

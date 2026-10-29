@@ -217,3 +217,13 @@ select:focus, input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px v
 /* toast */
 .toast { position: fixed; left: 50%; bottom: 56px; transform: translateX(-50%) translateY(20px); background: var(--text); color: var(--bg); padding: 9px 16px; border-radius: 9px; font-size: 12px; font-weight: 700; box-shadow: var(--shadow); opacity: 0; transition: all .25s; pointer-events: none; z-index: 90; }
 .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+/* Multi-provider controls — scoped to overlays, no changes to transcript UI. */
+.ai-controls { padding: 12px 14px 0; display: grid; gap: 7px; }
+.ai-controls > label { font-size: 12px; font-weight: 700; color: var(--text-dim); }
+.ai-controls .sheet-actions { padding: 4px 0 0; }
+.provider-editor { display: grid; gap: 6px; padding: 10px; background: var(--bg-elev); border: 1px solid var(--line); border-radius: var(--radius-sm); }
+.provider-editor[hidden] { display: none; }
+.provider-editor label { margin-top: 5px; font-size: 11px; font-weight: 700; color: var(--text-dim); }
+.provider-editor .row-gap { margin-top: 8px; flex-wrap: wrap; }
+.opt-block .row-gap select { min-width: 0; }
